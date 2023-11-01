@@ -44,6 +44,9 @@
 
 `DROP USER ‘user’@’host’;`
 
+-Mostrar permissos d’usuari:
+`SHOW GRANTS FOR 'user'@'host';`
+
 ## Permisos
 
 -Donar permisos a un usuari sobre una taula d'una BD:
@@ -57,3 +60,45 @@
 -Treure permisos a un usuari sobre una taula d’una BD
 
 `REVOKE permís ON nomBD.nomTaula FROM 'usuari'@host’;`
+
+-Assumint que estem loguejats en un usuari mostrem els permissos:
+
+`SHOW GRANTS;`
+
+-Mostrar els permisos d’un usuari:
+
+`SHOW GRANTS FOR ‘user’@’host’;`
+
+## Rols
+
+-Crear un rol:
+
+`CREATE ROLE nom;`
+
+-Eliminar un rol:
+
+`DROP ROLE nom;`
+
+-Mostrar rols existents:
+
+`SELECT user AS role_name
+FROM mysql.user
+WHERE host = '%'
+AND NOT LENGTH(authentication_string);`
+
+-Donar permís al rol sobre una bd:
+
+`GRANT permis ON nomBD.* TO nomRol;`
+
+-Mostrar permisos del rol:
+
+`SHOW GRANTS FOR nomRol;`
+
+-Activa el rol per un usuari:
+
+`SET ROLE nomRol`
+
+-Assumint que estem loguejats com usuari mostrem els rols actius:
+
+`SELECT CURRENT_ROLE();`
+
