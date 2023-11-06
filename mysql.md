@@ -102,3 +102,7 @@ AND NOT LENGTH(authentication_string);`
 
 `SELECT CURRENT_ROLE();`
 
+## Altra informació
+-Mostrar les columnes d'una taula d'una BD:
+`SHOW COLUMNS FROM nomBD.nomTaula`
+
