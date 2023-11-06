@@ -104,5 +104,11 @@ AND NOT LENGTH(authentication_string);`
 
 ## Altra informació
 -Mostrar les columnes d'una taula d'una BD:
+
 `SHOW COLUMNS FROM nomBD.nomTaula`
 
+-Mostrem les files que existeixen en les taules d'una BD
+
+`SELECT table_name, table_rows
+FROM information_schema.tables
+WHERE table_schema = 'employeesDB';`
