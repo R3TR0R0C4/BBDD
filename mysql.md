@@ -12,6 +12,10 @@
 
 `SHOW databases;`
 
+-Mostrar els camps d'una taula:
+
+`DESCRIBE nomTaula;`
+
 ## Taules
 
 -Crear taula:
